@@ -45,7 +45,7 @@ do_show() {
 	write_list_start "Current xorg.conf symlink:"
 	if [[ -L ${EROOT}/etc/X11/xorg.conf ]] ; then
 		local xorgconf=$(canonicalise "${EROOT}/etc/X11/xorg.conf")
-		write_kv_list_entry "${xorgconf%/}" ""
+		write_kv_list_entry "${xorgconf}" ""
 	else
 		write_kv_list_entry "(unset)" ""
 	fi

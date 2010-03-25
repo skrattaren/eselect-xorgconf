@@ -30,3 +30,16 @@ Available xorg.conf symlink targets:
 Current xorg.conf symlink:
   /etc/X11/xorg.conf.nvidia
 }}}
+
+= Plans =
+
+== For 0.2 ==
+
+ * ~~ strip `xorg.conf.` from target names ~~
+ * ~~ ignore standard `/etc/X11/xorg.conf.example` ~~
+
+These tasks seems to be implemented, so after a little bit of testing 0.2 will be released.
+
+== For 0.3 ==
+
+ * implement support for split configs (`/etc/X11/xorg.conf.d/` in Xorg 1.8)

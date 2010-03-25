@@ -1,0 +1,31 @@
+#summary xorg-conf module for app-admin/eselect
+
+= About =
+
+*eselect-xorg-conf* is a simple module for standard [http://gentoo.org/ Gentoo Linux] tool [http://packages.gentoo.org/package/app-admin/eselect app-admin/eselect]. It allows for convenient managing of multiple _xorg.conf_'s for your Xorg server via symlinking. It is especially useful while experimenting with various video drivers or display modes.
+
+It is quite simple result of hacking standard eselect module for kernels.
+
+= Installation =
+
+Get it [http://code.google.com/p/krigstasks-samling/source/browse/bin/xorg.conf.eselect here] and put in _/usr/share/eselect/modules_, if you feel slackish. Otherwise use [https://bugs.gentoo.org/show_bug.cgi?id=311295 ebuild] by [http://code.google.com/p/qmellon/ Mellon].
+
+= Usage =
+
+Use it just like any other eselect
+
+{{{
+% sudo eselect xorg.conf show
+Current xorg.conf symlink:
+  /etc/X11/xorg.conf.nouveau
+% sudo eselect xorg.conf list
+Available xorg.conf symlink targets:
+  [1]   xorg.conf.backup
+  [2]   xorg.conf.default
+  [3]   xorg.conf.nouveau
+  [4]   xorg.conf.nvidia
+% sudo eselect xorg.conf set 4
+% sudo eselect xorg.conf show
+Current xorg.conf symlink:
+  /etc/X11/xorg.conf.nvidia
+}}}

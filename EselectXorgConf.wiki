@@ -9,7 +9,7 @@ It is quite simple result of hacking standard eselect module for kernels.
 
 = Installation =
 
-Get it [http://code.google.com/p/krigstasks-samling/source/browse/bin/xorg.conf.eselect here] or (hg-version could be broken) [http://code.google.com/p/krigstasks-samling/downloads/detail?name=eselect-xorgconf-0.1.tar.bz2 here] and put in _/usr/share/eselect/modules_, if you feel slackish and daring (it could be broken). Otherwise use [https://bugs.gentoo.org/show_bug.cgi?id=311295 ebuild] by [http://code.google.com/p/qmellon/ Mellon].
+Get it [http://code.google.com/p/krigstasks-samling/source/browse/bin/xorg.conf.eselect here] or (hg-version could be broken) [http://code.google.com/p/krigstasks-samling/downloads/ here] and put in _/usr/share/eselect/modules_, if you feel slackish and daring (it could be broken). Otherwise use *rion* overlay.
 
 = Usage =
 
@@ -21,24 +21,16 @@ Current xorg.conf symlink:
   /etc/X11/xorg.conf.nouveau
 % sudo eselect xorg.conf list
 Available xorg.conf symlink targets:
-  [1]   xorg.conf.backup
-  [2]   xorg.conf.default
-  [3]   xorg.conf.nouveau
-  [4]   xorg.conf.nvidia
-% sudo eselect xorg.conf set 4
+  [1]   backup
+  [2]   nouveau
+  [3]   nvidia
+% sudo eselect xorg.conf set 3
 % sudo eselect xorg.conf show
 Current xorg.conf symlink:
   /etc/X11/xorg.conf.nvidia
 }}}
 
 = Plans =
-
-== For 0.2 ==
-
- * ~~ strip `xorg.conf.` from target names ~~
- * ~~ ignore standard `/etc/X11/xorg.conf.example` ~~
-
-These tasks seems to be implemented, so after a little bit of testing 0.2 will be released.
 
 == For 0.3 ==
 

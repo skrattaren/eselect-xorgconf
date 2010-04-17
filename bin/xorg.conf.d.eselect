@@ -1,23 +1,17 @@
 # -*-eselect-*-  vim: ft=eselect
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: fontconfig.eselect 728 2009-11-14 21:08:28Z dirtyepic $
+# Based on standard Gentoo fontconfig.eselect module
 
 DESCRIPTION="Manage fontconfig /etc/X11/xorg.conf.d/ symlinks"
-AUTHOR=""
-MAINTAINER=""
-SVN_DATE='$Date: 2009-11-14 15:08:28 -0600 (Sat, 14 Nov 2009) $'
-VERSION=$(svn_date_to_version "${SVN_DATE}")
+MAINTAINER="sterkrig@home.no"
+
+# TODOs:
+# - absolute or relative path targets shouldn't be used too
 
 find_targets() {
 	local targets bc x i=0
 	bcdirs[i]="${EROOT}/etc/X11/xorg.conf.avail/*.conf"
-
-	if [[ -n "${ES_XORGCONFIG_DIRS}" ]] ; then
-		for x in ${ES_XORGCONFIG_DIRS} ; do
-			bcdirs[$((++i))]="${x}/*"
-		done
-	fi
 
 	for bc in ${bcdirs[@]} ; do
 		[[ -e ${bc} && ${bc} != *~ ]] && targets="${targets}\n$(basename ${bc})"
@@ -120,12 +114,6 @@ do_enable() {
 				then
 					file="${EROOT}/etc/X11/xorg.conf.avail/${bc}"
 				else
-					if [[ -n "${ES_XORGCONFIG_DIRS}" ]] ; then
-						for x in ${ES_XORGCONFIG_DIRS} ; do
-							[[ -f ${x}/${bc} ]] && file="${x}/${bc}"
-						done
-					fi
-
 					[[ -e ${file} ]] || \
 						file="${EROOT}/etc/X11/xorg.conf.avail/${bc}"
 				fi

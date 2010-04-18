@@ -9,7 +9,7 @@ It is quite simple result of hacking standard eselect module for kernels.
 
 = Installation =
 
-Get it [http://code.google.com/p/krigstasks-samling/source/browse/bin/xorg.conf.eselect here] or (hg-version could be broken) [http://code.google.com/p/krigstasks-samling/downloads/ here] and put in _/usr/share/eselect/modules_, if you feel slackish and daring (it could be broken). Otherwise use *rion* overlay.
+Get it [http://code.google.com/p/krigstasks-samling/source/browse?repo=esel-xconf here] or (hg-version could be broken) [http://code.google.com/p/krigstasks-samling/downloads/ here] and put in _/usr/share/eselect/modules_, if you feel slackish and daring (it could be broken). Otherwise use *rion* overlay.
 
 = Usage =
 

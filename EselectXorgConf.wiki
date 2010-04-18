@@ -34,4 +34,4 @@ Current xorg.conf symlink:
 
 == For 0.3 ==
 
- * implement support for split configs (`/etc/X11/xorg.conf.d/` in Xorg 1.8)
+ * implement support for split configs (`/etc/X11/xorg.conf.d/` in Xorg 1.8, in *_hg_* already)

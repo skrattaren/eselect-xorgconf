@@ -3,7 +3,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # Based on standard Gentoo fontconfig.eselect module
 
-DESCRIPTION="Manage fontconfig /etc/X11/xorg.conf.d/ symlinks"
+DESCRIPTION="Manage Xorg server >=1.8 config symlinks"
 MAINTAINER="sterkrig@home.no"
 
 # TODOs:

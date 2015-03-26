@@ -1,6 +1,3 @@
-#summary xorg-conf module for app-admin/eselect
-#labels Featured,About
-
 About
 =====
 
